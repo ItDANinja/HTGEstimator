@@ -1,0 +1,47 @@
+{
+  "client_name": "Jane Smith",
+  "project_address": "123 Orange Ave, Orlando, FL",
+  "request_description": "Convert existing lanai into conditioned sunroom with new flooring and finishes.",
+  "site_conditions": [
+    "Occupied residence",
+    "Limited driveway parking (2 vehicles)"
+  ],
+  "attachments": [
+    {"path": "photos/lanai-existing.jpg", "kind": "photo", "description": "Existing lanai"},
+    {"path": "drawings/sunroom-sketch.pdf", "kind": "drawing", "description": "Client sketch"}
+  ],
+  "services": [
+    {
+      "name": "Sunroom Conversion",
+      "service_type": "general_carpentry",
+      "breakdown": [
+        {"phase": "Prep", "description": "Protect adjacent interior and set dust control", "hours": {"low": 4, "high": 6}},
+        {"phase": "Demo", "description": "Remove screens, framing, and finishes", "hours": {"low": 10, "high": 14}},
+        {"phase": "Framing", "description": "Frame new walls, headers, and rough openings", "hours": {"low": 18, "high": 24}},
+        {"phase": "Rough-in", "description": "Coordinate electrical rough-in (allowance)", "hours": {"low": 6, "high": 8}},
+        {"phase": "Insulation", "description": "Install batt insulation and vapor barrier", "hours": {"low": 4, "high": 6}},
+        {"phase": "Drywall & Finish", "description": "Hang, finish, sand drywall", "hours": {"low": 16, "high": 22}},
+        {"phase": "Flooring", "description": "Install LVP flooring and base", "hours": {"low": 8, "high": 12}},
+        {"phase": "Trim & Paint", "description": "Install trim, caulk, and paint surfaces", "hours": {"low": 14, "high": 18}},
+        {"phase": "Cleanup", "description": "Final clean and punch support", "hours": {"low": 4, "high": 6}}
+      ],
+      "materials": [
+        {"name": "2x4 SPF Lumber", "quantity": 120, "unit": "lf", "unit_cost_low": 1.95, "unit_cost_high": 2.4},
+        {"name": "Drywall (1/2\" sheets)", "quantity": 20, "unit": "sheet", "unit_cost_low": 14.0, "unit_cost_high": 18.0},
+        {"name": "LVP Flooring", "quantity": 240, "unit": "sq.ft", "unit_cost_low": 2.85, "unit_cost_high": 4.25},
+        {"name": "Insulation Batts", "quantity": 220, "unit": "sq.ft", "unit_cost_low": 0.85, "unit_cost_high": 1.15},
+        {"name": "Paint & Sundries", "quantity": 1, "unit": "lot", "unit_cost_low": 280, "unit_cost_high": 420}
+      ],
+      "assumptions": [
+        "Electrical rough-in handled by licensed trade partner under separate allowance.",
+        "Existing slab is level and suitable for LVP install without extensive prep."
+      ],
+      "exclusions": [
+        "HVAC load calculations or new system sizing.",
+        "Glazing upgrades beyond code minimums."
+      ],
+      "stage_returns": 1,
+      "permit_required": true
+    }
+  ]
+}
