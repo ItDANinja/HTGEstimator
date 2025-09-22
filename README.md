@@ -14,6 +14,8 @@ markdown estimate.
 - Generates a professional estimate formatted per HTG guidelines, including assumptions, exclusions,
   pricing tables, material itemization, totals, and clarifying questions.
 - Supports attachments metadata so estimators can reference client photos/drawings.
+- Ships with a desktop GUI to capture project inputs and produce client-ready estimates without
+  touching the command line.
 
 ## Installation
 
@@ -46,6 +48,19 @@ Create a starter template (JSON by default, YAML optional):
 ```bash
 htg-estimator sample --format yaml > my_request.yaml
 ```
+
+### Graphical Interface
+
+Launch the point-and-click interface for building estimates interactively:
+
+```bash
+htg-estimator gui
+```
+
+The GUI walks through client details, services, labor phases, materials, attachments, and site
+conditions. It renders the finished markdown estimate, supports clipboard copy/save, and can export
+the structured request JSON for reuse. The interface requires a Python installation with
+`tkinter`/`ttk` support (typically provided via `python3-tk`).
 
 ## Input Structure
 

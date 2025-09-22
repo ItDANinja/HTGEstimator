@@ -41,6 +41,8 @@ def main() -> None:
         help="Output format for the template",
     )
 
+    subparsers.add_parser("gui", help="Launch the graphical estimate builder")
+
     args = parser.parse_args()
 
     if args.command == "estimate":
@@ -60,6 +62,15 @@ def main() -> None:
             print(yaml.safe_dump(template, sort_keys=False))
         else:
             print(json.dumps(template, indent=2))
+        return
+
+    if args.command == "gui":
+        from .gui import EstimatorGUI
+        try:
+            app = EstimatorGUI()
+        except RuntimeError as exc:  # pragma: no cover - depends on tkinter availability
+            parser.exit(status=2, message=f"{exc}\n")
+        app.run()
         return
 
     parser.print_help()
